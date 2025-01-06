@@ -1,1 +1,18 @@
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - OAuth Flask App</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <img src="https://media.istockphoto.com/id/2151954310/photo/shield-security-network-technology-wire-frame-concept.webp?a=1&b=1&s=612x612&w=0&k=20&c=dXCjIveEjelzAWqLkt3Hu6LXYhBSyH5vJAcCXhr06k8=" alt="Forest" class="header-image">
+        <h1>Welcome, {{ user_name }}!</h1>
+        <p>You are now logged in. Enjoy browsing the app!</p>
+        <a href="{{ url_for('logout') }}" class="btn">Logout</a>
+        <a href="{{ url_for('delete_account') }}" class="btn danger">Delete Account</a>
+    </div>
+</body>
+</html>

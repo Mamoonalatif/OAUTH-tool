@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OAuth Flask App</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <img src="https://plus.unsplash.com/premium_photo-1700830193308-73775665bcb0?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8b25saW5lJTIwc2VjdXJpdHl8ZW58MHx8MHx8fDA%3D" alt="Beautiful Landscape" class="header-image">
+        <h1>Welcome to Our Web App</h1>
+        <p>This app allows you to sign in with your Google account.</p>
+        {% if 'user_info' in session %}
+            <p>Welcome back, {{ user_name }}!</p>
+            <a href="{{ url_for('logout') }}" class="btn">Logout</a>
+            <a href="{{ url_for('delete_account') }}" class="btn danger">Delete Account</a>
+        {% else %}
+            <a href="{{ url_for('login') }}" class="btn">Login with Google</a>
+        {% endif %}
+    </div>
+</body>
+</html>
