@@ -1,6 +1,8 @@
 # OAUTH-tool
-![image](https://github.com/user-attachments/assets/9568683a-6688-4913-821c-67a945213563)
-![image](https://github.com/user-attachments/assets/d691c9d4-e4a6-41bb-a546-a8f9e5f8215b)
+![image](https://github.com/user-attachments/assets/d1a48606-641c-48d5-9b7f-2fdd38eac527)
+![image](https://github.com/user-attachments/assets/dd4eaf0d-d49c-4641-93cf-a2e805cef1e3)
+![image](https://github.com/user-attachments/assets/794d5e92-ca9a-4fc7-92f9-d5743d4ac57d)
+
 # Google OAuth 2.0 Flask Application
 This is a Flask-based web application that implements Google OAuth 2.0 for user authentication. It allows users to log in using their Google account, manage their session, and store user information in an SQLite database.
 
