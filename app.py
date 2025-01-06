@@ -8,8 +8,8 @@ import uuid
 app = Flask(__name__)
 app.secret_key = os.urandom(24)
 
-CLIENT_ID = ''
-CLIENT_SECRET = ''
+CLIENT_ID = '7252985939-sqnu1ku9h6qkv6kkf1gprqtedlfs7doe.apps.googleusercontent.com'
+CLIENT_SECRET = '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'
 AUTHORIZATION_URL = 'https://accounts.google.com/o/oauth2/auth'
 TOKEN_URL = 'https://oauth2.googleapis.com/token'
 USER_INFO_URL = 'https://www.googleapis.com/oauth2/v3/userinfo'
@@ -121,26 +121,6 @@ def add_or_update_user(user_info):
         conn.close()
 
 
-@app.route('/shop')
-def shop():
-    return render_template('shop.html')
-
-
-@app.route('/explore')
-def explore():
-    return render_template('exploreArt.html')
-
-
-@app.route('/about')
-def about():
-    return render_template('aboutus.html')
-
-
-@app.route('/contact')
-def contact():
-    return render_template('formfinal.html')
-
-
 @app.route('/logout')
 def logout():
     session.clear()
@@ -150,7 +130,7 @@ def logout():
 
 @app.route('/home')
 def home():
-    return render_template('index.html')
+    return render_template('home.html')
 
 
 @app.route('/delete_account')
@@ -188,9 +168,9 @@ def delete_user(google_id):
 @app.route('/')
 def index():
     if 'user_info' in session:  
-        return render_template('index.html', user_name=session['user_info']['name'])
+        return render_template('home.html', user_name=session['user_info']['name'])
     else:
-        return render_template('exploreArt.html')
+        return render_template('index.html')
 
 
 if __name__ == '__main__':
