@@ -8,8 +8,8 @@ import uuid
 app = Flask(__name__)
 app.secret_key = os.urandom(24)
 
-CLIENT_ID = '7252985939-sqnu1ku9h6qkv6kkf1gprqtedlfs7doe.apps.googleusercontent.com'
-CLIENT_SECRET = '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'
+CLIENT_ID = 'Clientidfromgoogleconsole'
+CLIENT_SECRET = 'clientsecret from Google console'
 AUTHORIZATION_URL = 'https://accounts.google.com/o/oauth2/auth'
 TOKEN_URL = 'https://oauth2.googleapis.com/token'
 USER_INFO_URL = 'https://www.googleapis.com/oauth2/v3/userinfo'
@@ -175,3 +175,4 @@ def index():
 
 if __name__ == '__main__':
     app.run(debug=True)
+
